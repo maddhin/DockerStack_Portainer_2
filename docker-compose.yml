@@ -1,0 +1,17 @@
+services:
+  
+  portainer-2-cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: portainer_2_cloudflared_container
+    restart: unless-stopped
+    command: tunnel --no-autoupdate run 
+    environment:
+      - TUNNEL_TOKEN=${CLOUDFLARED_TOKEN}
+    user: "1000:1000"
+    networks:
+      - portainer_tunnelnet
+
+networks:
+  portainer_2_tunnelnet: #the netwrok needs to be manually set up. Run-> docker network create portainer_2_tunnelnet
+    external: true
+
