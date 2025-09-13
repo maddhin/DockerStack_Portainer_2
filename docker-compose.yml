@@ -9,7 +9,7 @@ services:
       - TUNNEL_TOKEN=eyJhIjoiMDZhYmM3M2VlNzg0YjU1YzNhZjhlMmZkNjAwMjdlZGEiLCJ0IjoiNjJhMjJiNjQtZTNhMC00NDkxLWFlZDUtNjJjMDBhMTVkZjVmIiwicyI6IllUUXhZV05tWkRBdFkyVXhNaTAwTURCakxXRmxZbVl0TUdNeE56UmpaRGt4TXpKayJ9
     user: "1000:1000"
     networks:
-      - portainer_tunnelnet
+      - portainer_2_tunnelnet
 
 networks:
   portainer_2_tunnelnet: #the netwrok needs to be manually set up. Run-> docker network create portainer_2_tunnelnet
