@@ -6,7 +6,7 @@ services:
     restart: unless-stopped
     command: tunnel --no-autoupdate run 
     environment:
-      - TUNNEL_TOKEN=${CLOUDFLARED_TOKEN}
+      - TUNNEL_TOKEN=eyJhIjoiMDZhYmM3M2VlNzg0YjU1YzNhZjhlMmZkNjAwMjdlZGEiLCJ0IjoiNjJhMjJiNjQtZTNhMC00NDkxLWFlZDUtNjJjMDBhMTVkZjVmIiwicyI6IllUUXhZV05tWkRBdFkyVXhNaTAwTURCakxXRmxZbVl0TUdNeE56UmpaRGt4TXpKayJ9
     user: "1000:1000"
     networks:
       - portainer_tunnelnet
